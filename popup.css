@@ -1,0 +1,214 @@
+body{
+  background-color: rgba(0,0,0,0.7);
+  font-family: Arial;
+}
+
+.content_popup_carga_imagenes, .content_popup_tomar_imagenes {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+}
+
+/*
+.content_popup_carga_imagenes article {
+	line-height: 28px;
+}
+
+.content_popup_carga_imagenes article h1 {
+	font-size: 20px;
+	text-align: left;
+	padding: 50px 0;
+}
+
+.content_popup_carga_imagenes article p {
+	margin-bottom: 20px;
+}
+
+.content_popup_carga_imagenes article .btn-abrir-popup {
+	padding: 0 20px;
+	margin-bottom: 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #fff;
+	background: #5E7DE3;
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+	cursor: pointer;
+}
+
+.content_popup_carga_imagenes article .btn-abrir-popup:hover {
+	background: rgba(94,125,227, .9);
+}
+
+*/
+
+/* ------------------------- */
+/* POPUP */
+/* ------------------------- */
+
+.overlay_carga_imagenes, .overlay_tomar_imagenes{
+	background: rgba(0,0,0,.3);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+}
+
+.overlay_carga_imagenes.active, .overlay_tomar_imagenes.active  {
+	visibility: visible;
+}
+
+.popup_carga_imagenes, .popup_tomar_imagenes{
+	background: #F8F8F8;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	font-family: 'Arial', sans-serif;
+	padding: 20px;
+	text-align: center;
+	width: 500px;
+	height: auto;
+	transition: .3s ease all;
+	transform: scale(0.7);
+	opacity: 0;
+
+}
+
+.popup_carga_imagenes .cerrar_popup_carga_imagenes, .popup_tomar_imagenes .cerrar_popup_tomar_imagenes   {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: .3s ease all;
+	color: #BBBBBB;
+}
+
+.popup_carga_imagenes .cerrar_popup_carga_imagenes:hover, .popup_tomar_imagenes .cerrar_popup_tomar_imagenes:hover {
+	color: #000;
+}
+
+.popup_carga_imagenes h3, .popup_tomar_imagenes h3 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	opacity: 0;
+}
+
+.popup_carga_imagenes h4, .popup_tomar_imagenes h4 {
+	font-size: 22px;
+	font-weight: 300;
+	margin-bottom: 40px;
+	opacity: 0;
+}
+
+/*
+.popup_carga_imagenes form .contenedor_inputs_carga_imagenes {
+	opacity: 0;
+}
+
+.popup_carga_imagenes form .contenedor_inputs_carga_imagenes input {
+	width: 100%;
+	margin-bottom: 20px;
+	height: 42px;
+	font-size: 18px;
+	line-height: 52px;
+	text-align: center;
+	border: 1px solid #BBBBBB;
+}
+
+.popup_carga_imagenes form .btn-submit {
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #fff;
+	background: #5E7DE3;
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+}
+
+
+.popup_carga_imagenes form .btn-submit:hover {
+	background: rgba(94,125,227, .9);
+}
+
+*/
+
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+.popup_carga_imagenes.active, .popup_tomar_imagenes.active {	transform: scale(1); opacity: 1; }
+.popup_carga_imagenes.active h3, .popup_tomar_imagenes.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+.popup_carga_imagenes.active h4, .popup_tomar_imagenes.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup_carga_imagenes.active .contenedor_inputs_carga_imagenes,
+.popup_tomar_imagenes.active .contenedor_inputs_tomar_imagenes { animation: entradaInputs 1s linear 1s forwards; }
+
+@keyframes entradaTitulo {
+	from {
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaSubtitulo {
+	from {
+		opacity: 0;
+		transform: translateY(25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaInputs {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+
+
+
+@media screen and (max-width:900px){
+  .popup_carga_imagenes, .popup_tomar_imagenes{
+  	width: 500px;
+  }
+}
+
+@media screen and (max-width:800px){
+
+  .popup_carga_imagenes, .popup_tomar_imagenes{
+  	width: 400px;
+  }
+}
+
+@media screen and (max-width:450px){
+  .popup_carga_imagenes, .popup_tomar_imagenes{
+  	width: 350px;
+  }
+  #canvas{
+    width: 350px;
+    height:300px;
+  }
+  #video{
+    width: 350px;
+    height:300px;
+  }
+}

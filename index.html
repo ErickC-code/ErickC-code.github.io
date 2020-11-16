@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+
+	<link rel="stylesheet" type="text/css" href="style_registroUsuarios.css">
+	<link rel="stylesheet" type="text/css" href="fontawesome-free-5.14.0-web/css/all.css">
+	<link rel="stylesheet" type="text/css" href="popup.css">
+	<link rel="stylesheet" type="text/css" href="loader.css">
+	<link rel="stylesheet" type="text/css" href="sweetalert2-10.3.5/package/dist/sweetalert2.min.css">
+
+
+	<div class="content">
+		<form id="form" action="#" method="POST" enctype="multipart/form-data">
+		        <div class="formu">
+							<!--
+		        	<div class="logo">
+		        		<img src="upam_logo.png" width="15%" alt="...">
+		        	</div>
+		        	-<h1>UPAM</h1>-
+		            <h2>Registro de alumno</h2>
+		            - <h2>Estudiante</h2> -
+		            <div class="inputs">
+			            <div class="grup">
+				            <input type="text"  id="nombre_alumno_txt" name="nombre_alumno_txt" value="" required="requerid" autocomplete="off" class="form-control" style="text-transform:uppercase;"  onkeyup="javascript:this.value=this.value.toUpperCase();">
+				            <label for="nombre_alumno_txt">Nombre *</label>
+			            </div>
+
+			            <div class="grup">
+				            <input type="text"  id="apellidop_alumno_txt" name="apellidop_alumno_txt" required="requerid" autocomplete="off" class="form-control" style="text-transform:uppercase;"  onkeyup="javascript:this.value=this.value.toUpperCase();">
+				            <label for="apellidop_alumno_txt">Apellido paterno *</label>
+			            </div>
+
+			            <div class="grup">
+				            <input type="text"  id="apellidom_alumno_txt" name="apellidom_alumno_txt" required="requerid" autocomplete="off" class="form-control" style="text-transform:uppercase;"  onkeyup="javascript:this.value=this.value.toUpperCase();">
+				            <label for="apellidom_alumno_txt">Apellido materno *</label>
+			            </div>
+
+			            <div class="grup">
+				            <input type="text"  id="matricula_alumno_txt" name="matricula_alumno_txt" required="requerid" autocomplete="off" class="form-control">
+				            <label for="grupo_alumno_txt">Matricula *</label>
+			            </div>
+
+			            <div class="grup">
+				            <input type="text"  id="grupo_alumno_txt" name="grupo_alumno_txt" required="requerid" autocomplete="off" class="form-control" style="text-transform:uppercase;"  onkeyup="javascript:this.value=this.value.toUpperCase();">
+				            <label for="grupo_alumno_txt">Grupo *</label>
+			            </div>
+
+			            <div class="grup">
+			            	-<label for="seccion_alumno_txt">Grupo</label>-
+				            <select name="seccion_alumno_txt" id="seccion_alumno_txt" class="form-control">
+	                      		<option value="">Seleccione la sección de inglés *</option>
+	                      		<option value="1">1</option>
+	                      		<option value="2">2</option>
+	                      		<option value="3">3</option>
+	                      		<option value="4">4</option>
+	                      		<option value="5">5</option>
+	                      		<option value="6">6</option>
+	                      		<option value="7">7</option>
+	                      		<option value="8">8</option>
+	                      		<option value="9">9</option>
+	                      		<option value="10">10</option>
+	                      		<option value="11">11</option>
+	                      		<option value="12">12</option>
+	                        </select>
+			            </div>
+
+			            <div class="grup">
+			            	-<label for="cuatrimestre_alumno_txt">Cuatrimestre</label>-
+				            <select name="carrera_alumno_txt" id="carrera_alumno_txt" class="form-control">
+				            	<option value="">Seleccione su carrera *</option>
+	                        </select>
+			            </div>
+
+			            <div class="grup">
+			            	-<label for="cuatrimestre_alumno_txt">Cuatrimestre</label>-
+				            <select name="cuatrimestre_alumno_txt" id="cuatrimestre_alumno_txt" class="form-control">
+				            	<option value="">Seleccione su cuatrimestre *</option>
+	                      		<option value="1">1</option>
+	                      		<option value="2">2</option>
+	                      		<option value="3">3</option>
+	                      		<option value="4">4</option>
+	                      		<option value="5">5</option>
+	                      		<option value="6">6</option>
+	                      		<option value="7">7</option>
+	                      		<option value="8">8</option>
+	                      		<option value="9">9</option>
+	                      		<option value="10">10</option>
+	                        </select>
+			            </div>
+
+			            <div class="grup">
+			                <input type="text"  id="usuarioTxt" name="usuarioTxt"  required="requerid" autocomplete="off" class="form-control">
+			                <label>Usuario (correo institucional) *</label>
+			            </div>
+			            <div class="grup">
+			                <input type="text" id="passwordTxt" name="passwordTxt"  required="requerid" autocomplete="off" class="form-control">
+			                <label>Contraseña *</label>
+			                <h6 style="font-size: 13px; color: #0774D9;">La contraseña debe de contener 1 o más letras mayúsculas, 1 o más letras minúsculas, 1 o más números. <br>Ejemplo: tg_bCCe2</h6>
+			            </div>
+			            <div class="grup">
+			                <input type="password" id="passwordTxt_confirmar" name="passwordTxt_confirmar"  required="requerid" autocomplete="off" class="form-control">
+			                <label>Confirmar contraseña *</label>
+			            </div>
+								-->
+			            <div class="grup">
+			            	<h6>Para dar permiso a la webcam de tomar una foto presiona el bóton: <a id="camera"><i class="fas fa-camera fa-2x"></i></a></h6>
+			        	</div>
+						<div class="grup">
+							<div id="vista_canvas_img" class="vistas_canvas_img" style="/*border-radius: 5px; ;border: 1px double; border-color: #006CBB; padding: 10px; align-items: center;*/">
+									<!-- Webcam video snapshot -->
+									<div id="conten_canvas" style="width:350px; height:500px; overflow: scroll;">
+
+									</div>
+							</div>
+							<!--
+							<button class="btn btn-primary d-none" type="button" id="loading_btn">
+								<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+								Cargando...
+							</button>
+							<button class="btn btn-secondary d-none" type="button" id="cancel_loading_btn">Cancelar</button>
+						-->
+						</div>
+
+						<div class="grup">
+							<div id="conten_inputs_canvas">
+
+							</div>
+						</div>
+
+						<!-- POPUP tomar imagenes-->
+					    <div class="content_popup_tomar_imagenes">
+					        <div class="overlay_tomar_imagenes" id="overlay_tomar_imagenes">
+					          <div class="popup_tomar_imagenes" id="popup_tomar_imagenes" style="width:500px; height:500px; overflow: scroll;">
+					            <!--<a id="cerrar_popup_tomar_imagenes" class="cerrar_popup_tomar_imagenes" onclick="cerrar_popup_cargar_imagenes()"><i class="fas fa-times"></i></a>-->
+					            <h4>Detección de rostro</h4>
+					        	<!-- Stream video via webcam -->
+										<div class="video-wrap" style="align-items: center; width: auto;">
+											<canvas id="canvas" width="350" height="300"></canvas>
+										   	<video id="video" playsinline  autoplay style="border-radius: 5px;"></video>
+
+
+
+
+										</div>
+								<!-- Trigger canvas web API -->
+								<!--<div class="controller">
+								    <button type="button" id="snap">Tomar foto</button>
+								</div>-->
+											<button type="button" id="snap">Tomar foto</button>
+					            <div class="progress">
+								  			<div class="progress-bar progress-bar-striped active" role="progressbar"
+								  			aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+								    			0%
+								    		</div>
+											</div>
+					          </div>
+					        </div>
+					    </div>
+
+
+
+
+		            </div>
+								<!--
+		            <button type="submit" name="button" id="enviar">Registrar</button>
+							-->
+		</form>
+  		<!-- POPUP cargar imagenes-->
+
+  		<div class="content_popup_carga_imagenes">
+            <div class="overlay_carga_imagenes" id="overlay_carga_imagenes">
+              <div class="popup_carga_imagenes" id="popup_carga_imagenes">
+                <!--<a id="cerrar_popup_carga_imagenes" class="cerrar_popup_carga_imagenes" onclick="cerrar_popup_cargar_imagenes()"><i class="fas fa-times"></i></a>-->
+                <p>Procesando imagenes</p>
+                <div class="loader-container1">
+                	<div class="loader-container">
+	                	<div class="loader_exterior"></div>
+	                	<div class="loader_interior"></div>
+                	</div>
+                </div>
+                <!--
+                <div class="progress">
+		  			<div class="progress-bar progress-bar-striped active" role="progressbar"
+		  			aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+		    			0%
+		    		</div>
+  				</div>
+  				-->
+              </div>
+            </div>
+        </div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript"  src="face-api.js"></script>
+	<script type="text/javascript" src="take_picture.js"></script>
+	<script type="text/javascript"  src="sweetalert2-10.3.5/package/dist/sweetalert2.min.js"></script>
+
+
+</body>
+</html>

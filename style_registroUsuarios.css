@@ -1,0 +1,233 @@
+:root{
+  --colorDTexto: #9E9E9E; /* gris #BDBDBD */
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  font-family:sans-serif;
+  /*background: #E0E0E0;*/
+  background: #fff;
+  width: 100%;
+  height: 1150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#canvas{
+  position: absolute;
+  background: transparent;
+  /*opacity: 0.1;*/
+}
+
+.logo{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+/*
+h1{
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 100;
+  font-size: 30px;
+  color: #2196F3;
+}
+*/
+
+p{
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 100;
+  font-size: 27px;
+  color: #616161;
+}
+
+
+h2{
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 100;
+  font-size: 20px;
+  color: #616161;
+}
+
+
+
+.content{
+  background: #fff;
+  /*padding: 10px 0;*/
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0 rgba(255,255, 255, 0.2);
+  border: 1px double;
+  border-color: var(--colorDTexto);
+  height: auto;
+  width: 900px;
+}
+
+.formu{
+  /*width: 110%;*/
+  padding: 20px;
+}
+
+.inputs{
+  display: flex;  /* Todo lo que esta se encuetre en linea */
+  flex-wrap: wrap;  /* Elementos que no quepan se bajan */
+  justify-content: center;
+}
+
+.inputs .grup{
+  position: relative;
+  margin: 20px;
+  text-decoration:none;
+  width: 370px;
+}
+
+input[type=text],input[type=password]{
+  background: none;
+  color: black; /* color de cadenas dentro de input #c6c6c6 */
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid var(--colorDTexto);
+  resize: none;
+}
+
+input[type=text]:focus,input[type=password]:focus{
+  outline: none;
+  color: black;
+}
+
+
+input[type=text]:focus~label,input[type=password]:focus~label ,input[type=text]:valid~label,input[type=password]:valid~label{
+    position: absolute;
+    top: -14px;
+    font-size: 12px;
+    color: #2196F3;
+}
+
+
+.formu label{
+  color: var(--colorDTexto);
+  font-size: 14px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transition: 0.4s ease all;
+  pointer-events: none;
+}
+
+.barraAbajo{
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+input[type=text]:focus~.barraAbajo::before, input[type=password]:focus~.barraAbajo::before{
+  width: 100%;
+}
+
+.barraAbajo::before{
+  content: '';
+  height: 2px;
+  width: 0;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  /*background: linear-gradient(to right, grey, blue);*/
+  background: #2196F3;
+  transition: 0.3 ease all;
+  left: 0%;
+}
+
+
+#enviar, .button{
+  display: block;
+  width: 120px;
+  height: 35px;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 10px auto;
+  background: #2196F3;
+  cursor: pointer;
+}
+
+
+
+
+
+
+@media screen and (max-width:950px){
+  .formu{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:900px){
+  
+  body{
+    height: 900px;
+  }
+  
+  .formu{
+    width: 95%;
+  }
+  .content{
+    height: 600px;
+    width: 800px;
+  }
+}
+
+@media screen and (max-width:800px){
+  
+  body{
+    height: 1500px;
+  }
+  .formu{
+    width: 95%;
+  }
+  .content{
+    height: 1210px;
+    width: 400px;
+  }
+
+  .inputs .grup{
+    position: relative;
+    margin: 20px;
+    text-decoration:none;
+    width: 500px;
+  }
+}
+
+@media screen and (max-width:450px){
+  body{
+    height: 1500px;
+  }
+  .formu{
+    width: 100%;
+  }
+  .content{
+    height: 1210px;
+    width: 350px;
+  }
+
+  .inputs .grup{
+    position: relative;
+    margin: 20px;
+    text-decoration:none;
+    width: 500px;
+  }
+}
